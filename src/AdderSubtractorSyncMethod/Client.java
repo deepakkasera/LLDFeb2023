@@ -1,4 +1,7 @@
-package AdderSubtractor;
+package AdderSubtractorSyncMethod;
+
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
 
 public class Client {
     public static void main(String[] args) throws InterruptedException {
@@ -15,9 +18,8 @@ public class Client {
 
         //Read more about join.
         t1.join();
-        System.out.println("Doing something.... " + count.value);
         t2.join();
 
-        System.out.println(count.value);
+        System.out.println(count.getValue());
     }
 }

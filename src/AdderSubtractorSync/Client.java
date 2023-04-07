@@ -1,4 +1,4 @@
-package AdderSubtractor;
+package AdderSubtractorSync;
 
 public class Client {
     public static void main(String[] args) throws InterruptedException {
@@ -15,7 +15,6 @@ public class Client {
 
         //Read more about join.
         t1.join();
-        System.out.println("Doing something.... " + count.value);
         t2.join();
 
         System.out.println(count.value);
